@@ -17,7 +17,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="box">
-                <form action="<?= ADMIN; ?>/product/add" method="post" data-toggle="validator">
+                <form action="<?= ADMIN; ?>/product/add" method="post" data-toggle="validator" id="add">
                     <div class="box-body">
                         <div class="form-group has-feedback">
                             <label for="title">Наименование товара</label>
@@ -82,7 +82,7 @@
 
                         <div class="form-group">
                             <label for="related">Связанные товары</label>
-                            <select name="related[]" class="form-control select2" id="related" multiple=""></select>
+                            <select name="related[]" class="form-control select2" id="related" multiple=""></select> 
                         </div>
 
                         <?php new \app\widgets\filter\Filter(null, WWW . '/filter/admin_filter_tpl.php'); ?>

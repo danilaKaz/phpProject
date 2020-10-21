@@ -108,7 +108,7 @@ $('.del-item').on('click', function () {
         success: function (res) {
             setTimeout(function () {
                 $this.closest('.file-upload').find('.overlay').css({ 'display': 'none' });
-                if (res == 1){
+                if (res == 1) {
                     $this.fadeOut();
                 }
             }, 1000);
@@ -121,3 +121,14 @@ $('.del-item').on('click', function () {
         }
     })
 });
+
+$('#add').on('submit', function () {
+    if (!isNumeric($('#category_id').val() )) {
+        alert('Выберите категорию');
+        return false;
+    }
+});
+
+function isNumeric(n) {
+    return !isNaN(parseFloat(n)) && isFinite(n);
+}
