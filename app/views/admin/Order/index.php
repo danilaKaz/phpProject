@@ -30,7 +30,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <?php foreach ($orders as $order) : ?>
+                                <?php foreach ($orders as $order) : ?> 
                                     <?php $class = $order['status'] ? 'success' : ''; ?>
                                     <tr class="<?= $class; ?>">
                                         <td><?= $order['id']; ?></td>
